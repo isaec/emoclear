@@ -2,7 +2,7 @@
 copy and paste the entire contents of this script into the console of discord
 use control/command shift i to open the developer console
 
-written by isaec - https://github.com/isaec/emopin
+written by isaec - https://github.com/isaec/emoclear
 */
 console.clear() //hide all the gunk in the console
 /*
