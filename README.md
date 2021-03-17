@@ -1,2 +1,2 @@
-# emopin
-"pin" emojis in the discord emoji picker without a modded client, using a simple console script
+# emoclear
+clear emoji history in discord emoji picker without loosing favorited emojis or a modded client, using a simple console script
