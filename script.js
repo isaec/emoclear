@@ -26,5 +26,21 @@ function getLocalStoragePropertyDescriptor() {
 }
 //redefine window.localStorage
 Object.defineProperty(window, 'localStorage', getLocalStoragePropertyDescriptor());
-
-console.log(window.localStorage)
+//gets the current emojistore so it can be modified and set
+let emojiStore = JSON.parse(window.localStorage.getItem("EmojiStore"))
+/*
+set an object containing only the star, but with no uses
+this is done because an empty object will cause default emojis to be rebuilt
+*/
+emojiStore._state.usageHistory = {
+    "star": {
+        "totalUses": 0,
+        "recentUses": [],
+        "frecency": 200,
+        "score": 200
+    }
+}
+//set the emojistore to be the modified version, that has no emoji history
+window.localStorage.setItem("EmojiStore", JSON.stringify(emojiStore))
+//reload the window to apply changes
+location.reload()
