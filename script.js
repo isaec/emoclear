@@ -3,7 +3,9 @@ copy and paste the entire contents of this script into the console of discord
 use control/command shift i to open the developer console
 
 written by isaec - https://github.com/isaec/emopin
-
+*/
+console.clear() //hide all the gunk in the console
+/*
 localStorage access method from https://stackoverflow.com/a/53773662
 
 this is needed because the discord developers deleted window.localStorage
@@ -22,7 +24,6 @@ function getLocalStoragePropertyDescriptor() {
     iframe.remove();
     return pd;
 }
-
 //redefine window.localStorage
 Object.defineProperty(window, 'localStorage', getLocalStoragePropertyDescriptor());
 
